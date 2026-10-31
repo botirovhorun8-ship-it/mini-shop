@@ -758,74 +758,283 @@
 # n = ortacha(name , ball)                   
 # print(n)
 # "=====MINI SHOP====="
-mahsulotlar = {
-    "olma": {"narx": 12000, "soni": 20},
-    "non": {"narx": 4000, "soni": 30},
-    "sut": {"narx": 10000, "soni": 15}
-}
+# mahsulotlar = {
+#     "olma": {"narx": 12000, "soni": 20},
+#     "non": {"narx": 4000, "soni": 30},
+#     "sut": {"narx": 10000, "soni": 15}
+# }
 
-kassa = 0
+# kassa = 0
 
 
-def mahsulotlarni_korish(product):
-    for n , b in product.items():
-        print(f"Mahsulot nomi: {n}\nMahsulot narxi:{b.get('narx')}\nMahsulot soni: {b.get('soni')}")
-        print("<<< >>>")
+# def mahsulotlarni_korish(product):
+#     for n , b in product.items():
+#         print(f"Mahsulot nomi: {n}\nMahsulot narxi:{b.get('narx')}\nMahsulot soni: {b.get('soni')}")
+#         print("<<< >>>")
 
-def mahsulot_qoshish():
-    nomi = input("mahsulot nomini kiriting?").lower()
-    try:
-        narx = int(input("mahsulot narxini kiriting?"))
-        soni = int(input("mahsulot sonini kiriting?"))
+# def mahsulot_qoshish():
+#     nomi = input("mahsulot nomini kiriting?").lower()
+#     try:
+#         narx = int(input("mahsulot narxini kiriting?"))
+#         soni = int(input("mahsulot sonini kiriting?"))
 
-        if narx < 1 or soni < 1:
-            print("xato! narxi va sonni manfiy bo'lish munkin emas")
-        else:
-            mahsulotlar[nomi] = {
-                "narx":narx,
-                "soni":soni
-            }
-            print("maxsulot qoshildi")
-    except:
-        print("hato boldi")
+#         if narx < 1 or soni < 1:
+#             print("xato! narxi va sonni manfiy bo'lish munkin emas")
+#         else:
+#             mahsulotlar[nomi] = {
+#                 "narx":narx,
+#                 "soni":soni
+#             }
+#             print("maxsulot qoshildi")
+#     except:
+#         print("hato boldi")
 
-def mahsulot_sotish(ichkikassa):
-    sotibol = input("Mahsulot nomini kiriting: ")
-    if sotibol in mahsulotlar:
-        miqdor  = int(input("Miqodrini kiriting: "))
-        if mahsulotlar[sotibol]["soni"] >= miqdor: 
-            sum = miqdor * mahsulotlar[sotibol]["narx"]
-            mahsulotlar[sotibol]["soni"] -= miqdor
-            ichkikassa = ichkikassa+ sum
-            print("Muvaffaqiyatli sotib oldingiz ")
-            mahsulotlarni_korish(mahsulotlar)
-            return ichkikassa
-        else: 
-            print("Bizda buncha kop mahsulot yoq")
-    else:
-        print("Bizda bunaqa mahsulot topilmadi")
-print(kassa)
+# def mahsulot_sotish(ichkikassa):
+#     sotibol = input("Mahsulot nomini kiriting: ")
+#     if sotibol in mahsulotlar:
+#         miqdor  = int(input("Miqodrini kiriting: "))
+#         if mahsulotlar[sotibol]["soni"] >= miqdor: 
+#             sum = miqdor * mahsulotlar[sotibol]["narx"]
+#             mahsulotlar[sotibol]["soni"] -= miqdor
+#             ichkikassa = ichkikassa+ sum
+#             print("Muvaffaqiyatli sotib oldingiz ")
+#             mahsulotlarni_korish(mahsulotlar)
+#             return ichkikassa
+#         else: 
+#             print("Bizda buncha kop mahsulot yoq")
+#     else:
+#         print("Bizda bunaqa mahsulot topilmadi")
+# print(kassa)
 
-# def hisobot():
-#     kassa = mahsulot_sotish(kassa)
-#     print("Kassa:", kassa)
-    # mahsulotlarni_korish(mahsulotlar)
-# hisobot()
-while True:
-    question= int(input("""
-     1. mahsulotlarni_korish
-     2. mahsulot_qoshish 
-     3. mahsulot_sotish
-     4. hisobot
-     5. Dasturni yopish
-     bulardan birin tanlang?   """))
-    if question == 1 :
-        mahsulotlarni_korish(mahsulotlar)
-    elif question ==2 :
-        mahsulot_qoshish()
-    elif question == 3:
-        mahsulot_sotish(kassa)
-    elif question == 4:
-        # hisobot()
-    else:
-        break
+# # def hisobot():
+# #     kassa = mahsulot_sotish(kassa)
+# #     print("Kassa:", kassa)
+#     # mahsulotlarni_korish(mahsulotlar)
+# # hisobot()
+# while True:
+#     question= int(input("""
+#      1. mahsulotlarni_korish
+#      2. mahsulot_qoshish 
+#      3. mahsulot_sotish
+#      4. hisobot
+#      5. Dasturni yopish
+#      bulardan birin tanlang?   """))
+#     if question == 1 :
+#         mahsulotlarni_korish(mahsulotlar)
+#     elif question ==2 :
+#         mahsulot_qoshish()
+#     elif question == 3:
+#         mahsulot_sotish(kassa)
+#     elif question == 4:
+#         # hisobot()
+#         pass
+#     else:
+#         break
+
+
+
+# bemorlar = {
+#     1: {
+#         "ism": "Ali",
+#         "yosh": 25,
+#         "shifokor": "Terapevt",
+#         "tolov": 0
+#     },
+#     2: {
+#         "ism": "Vali",
+#         "yosh": 30,
+#         "shifokor": "Stomatolog",
+#         "tolov": 0
+#     }
+# }
+
+# kassa = 0
+# keyingi_id = 3
+
+
+# # 1. Bemorlarni ko'rish
+# def bemorlarni_korish():
+#     print("\n===== BEMORLAR RO'YXATI =====")
+
+#     if len(bemorlar) == 0:
+#         print("Bemorlar mavjud emas!")
+#         return
+
+#     for id, malumot in bemorlar.items():
+#         print("-------------------------")
+#         print("ID:", id)
+#         print("Ismi:", malumot["ism"])
+#         print("Yoshi:", malumot["yosh"])
+#         print("Shifokori:", malumot["shifokor"])
+#         print("To'lovi:", malumot["tolov"], "so'm")
+
+
+# # 2. Yangi bemor qo'shish
+# def bemor_qoshish():
+#     global keyingi_id
+
+#     ism = input("Bemor ismini kiriting: ")
+
+#     while True:
+#         try:
+#             yosh = int(input("Bemor yoshini kiriting: "))
+
+#             if yosh <= 0:
+#                 print("Yosh 0 dan katta bo'lishi kerak!")
+#                 continue
+
+#             break
+
+#         except ValueError:
+#             print("Yoshni faqat son bilan kiriting!")
+
+#     bemorlar[keyingi_id] = {
+#         "ism": ism,
+#         "yosh": yosh,
+#         "shifokor": "Belgilanmagan",
+#         "tolov": 0
+#     }
+
+#     print("Bemor muvaffaqiyatli qo'shildi!")
+#     print("Bemor ID:", keyingi_id)
+
+#     keyingi_id += 1
+
+
+# # 3. Shifokor qabuliga yozish
+# def qabul_belgilash():
+#     try:
+#         id = int(input("Bemor ID raqamini kiriting: "))
+#     except ValueError:
+#         print("ID faqat son bo'lishi kerak!")
+#         return
+
+#     if id not in bemorlar:
+#         print("Bunday bemor mavjud emas!")
+#         return
+
+#     print("\n1. Terapevt")
+#     print("2. Stomatolog")
+#     print("3. Pediatr")
+#     print("4. Nevrolog")
+
+#     shifokorlar = {
+#         "1": "Terapevt",
+#         "2": "Stomatolog",
+#         "3": "Pediatr",
+#         "4": "Nevrolog"
+#     }
+
+#     tanlov = input("Shifokorni tanlang: ")
+
+#     if tanlov in shifokorlar:
+#         bemorlar[id]["shifokor"] = shifokorlar[tanlov]
+#         print("Qabul muvaffaqiyatli belgilandi!")
+#     else:
+#         print("Noto'g'ri tanlov!")
+
+
+# # 4. Bemorni qidirish
+# def bemor_qidirish():
+#     try:
+#         id = int(input("Bemor ID raqamini kiriting: "))
+#     except ValueError:
+#         print("ID raqami noto'g'ri!")
+#         return
+
+#     if id in bemorlar:
+#         print("\nBemor topildi!")
+#         print("Ismi:", bemorlar[id]["ism"])
+#         print("Yoshi:", bemorlar[id]["yosh"])
+#         print("Shifokori:", bemorlar[id]["shifokor"])
+#         print("To'lovi:", bemorlar[id]["tolov"], "so'm")
+#     else:
+#         print("Bemor topilmadi!")
+
+
+# # 5. To'lov qabul qilish
+# def tolov_qabul_qilish():
+#     global kassa
+
+#     try:
+#         id = int(input("Bemor ID raqamini kiriting: "))
+#     except ValueError:
+#         print("ID noto'g'ri!")
+#         return
+
+#     if id not in bemorlar:
+#         print("Bemor mavjud emas!")
+#         return
+
+#     try:
+#         pul = int(input("To'lov miqdorini kiriting: "))
+#     except ValueError:
+#         print("To'lov faqat son bo'lishi kerak!")
+#         return
+
+#     if pul <= 0:
+#         print("To'lov 0 dan katta bo'lishi kerak!")
+#         return
+
+#     bemorlar[id]["tolov"] += pul
+#     kassa += pul
+
+#     print("To'lov muvaffaqiyatli amalga oshirildi!")
+#     print("To'langan pul:", pul, "so'm")
+
+
+# # 6. Klinika hisoboti
+# def klinika_hisoboti():
+#     qabul = 0
+
+#     for malumot in bemorlar.values():
+#         if malumot["shifokor"] != "Belgilanmagan":
+#             qabul += 1
+
+#     print("\n===== KLINIKA HISOBOTI =====")
+#     print("Jami bemorlar:", len(bemorlar))
+#     print("Qabulga yozilganlar:", qabul)
+#     print("Klinika kassasi:", kassa, "so'm")
+
+
+# # ASOSIY MENYU
+# while True:
+#     print("\n")
+#     print("================================")
+#     print("       🏥 KLINIKA TIZIMI")
+#     print("================================")
+#     print("1. Bemorlarni ko'rish")
+#     print("2. Yangi bemor qo'shish")
+#     print("3. Shifokor qabuliga yozish")
+#     print("4. Bemorni qidirish")
+#     print("5. To'lov qilish")
+#     print("6. Klinika hisoboti")
+#     print("0. Dasturdan chiqish")
+#     print("================================")
+
+#     tanlov = input("Tanlovingizni kiriting: ")
+
+#     if tanlov == "1":
+#         bemorlarni_korish()
+
+#     elif tanlov == "2":
+#         bemor_qoshish()
+
+#     elif tanlov == "3":
+#         qabul_belgilash()
+
+#     elif tanlov == "4":
+#         bemor_qidirish()
+
+#     elif tanlov == "5":
+#         tolov_qabul_qilish()
+
+#     elif tanlov == "6":
+#         klinika_hisoboti()
+
+#     elif tanlov == "0":
+#         print("Klinika dasturidan chiqildi!")
+#         break
+
+#     else:
+#         print("Noto'g'ri tanlov! Qayta urinib ko'ring.")

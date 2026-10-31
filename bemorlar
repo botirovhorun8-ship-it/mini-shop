@@ -1,0 +1,79 @@
+bemorlar = {
+    1: {"ism": "Ali","yosh": 25,"shifokor": "Terapevt","tolov": 0 },
+    2: {"ism": "Vali","yosh": 32,"shifokor": "Stomatolog","tolov": 0 }
+}
+keyingi_id = 3
+def bemorlarni_korish():
+    for i , j in bemorlar.items():
+        print("<<<<<>>>>>")
+        print(f"Kod: {i}")
+        print(f"Ism: {j["ism"]}")
+        print(f"Yosh: {j["yosh"]}")
+        print(f"Shifokot ko'rigi: {j["shifokor"]}")
+        print(f"Tolov holati: {j["tolov"]}")
+bemorlarni_korish()
+
+# def bemor_qoshish():
+#     ism = input("Ism kiriting ")
+#     try:
+#         yosh = int(input("Yosh: "))
+#         if yosh <= 0:
+#             print("Yosh noto'g'ri!")
+#             return
+#     except ValueError:
+#         print("Faqat son kiriting!")
+#     ID = int(input("ID ni kirit?")) 
+#     if ID not in bemorlar.keys():
+#      print("ID qabul boldi")
+#     else:
+#      print("ID xato!")           
+# # bemor_qoshish()
+
+# def qabul_belgilash():
+#     bemor_ID = int(input("ID raqamini kiriting?"))
+
+#     if bemor_ID in bemorlar:
+
+#         print("1. Terapevt")
+#         print("2. Stomatolog")
+#         print("3. Pediatr")
+#         print("4. Nevrolog")
+
+#         tnlov = input("Tanlovingiz? ")
+
+#         Shifokorlar = {
+#             "1": "Terapevt",
+#             "2": "Stomatolog",
+#             "3": "Pediatr",
+#             "4": "Nevrolog"
+#         }
+
+#         if tnlov in Shifokorlar:
+#             bemorlar[bemor_ID]["shifokor"] = Shifokorlar[tnlov]
+#             print("Qabul belgilandi!")
+#         else:
+#             print("Noto'g'ri tanlov!")
+
+#     else:
+#         print("Bemor topilmadi!")
+# # qabul_belgilash()
+
+
+# def bemor_qidirish():
+#     try:
+#         bemor_ID = int(input("ID ni kiriting?"))
+#         if bemor_ID in bemorlar:
+#             print("===Bemor To'pildi===")
+#             print("Ism:", bemorlar[bemor_ID]["ism"])
+#             print("Yosh:", bemorlar[bemor_ID]["yosh"])
+#             print("Shifokor:", bemorlar[bemor_ID]["shifokor"])
+#             print("To'lov:", bemorlar[bemor_ID]["tolov"],)
+#         else:
+#             print("Bemor topilmadi!")
+
+#     except ValueError:
+#         print("ID o'rniga faqat son kiriting!")
+# # bemor_qidirish()
+
+# def tolov_qabul_qilish():
+#     bemor_ID = int(input("ID ni kiriting?"))

@@ -205,4 +205,4 @@
 # tugma_ochirish = tk.Button(tugmalar_joyi,text="⌫",font=("Arial", 16),bg="#404040",fg="white",command=lambda: ekran.delete(len(ekran.get())-1, tk.END))
 # tugma_ochirish.grid(row=0, column=1, sticky="nsew")
 # oyna.mainloop()
-
+    
